@@ -1,0 +1,242 @@
+/* ---------- Colors and fonts ---------- */
+:root {
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --text: #1c2433;
+  --muted: #5d6879;
+  --accent: #1f4e8c;
+  --accent-dark: #163a69;
+  --border: #d9e0ea;
+
+  --font-body: Georgia, "Times New Roman", serif;
+  --font-ui: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* ---------- Navigation ---------- */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.nav-button {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.55rem 1.4rem;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-button:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.nav-button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent-dark);
+  outline-offset: 3px;
+}
+
+/* ---------- Main content ---------- */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+}
+
+#intro {
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.25rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+/* ---------- Blog posts ---------- */
+article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+article h3 a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+article h3 a:hover {
+  text-decoration: underline;
+}
+
+.post-date {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+article p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--border);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .nav-button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* ---------- Home page hero ---------- */
+.hero {
+  background-color: #163a69;
+  background-image: url("math-bg.svg"), linear-gradient(135deg, #163a69, #1f4e8c);
+  background-repeat: repeat, no-repeat;
+  background-size: 600px 400px, cover;
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 1.25rem;
+}
+
+.hero-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero-welcome {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-degree {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.15rem;
+}
+
+.hero-college {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.hero-tagline {
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3.5rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+}
+
+/* ---------- About page ---------- */
+.about-facts {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.about-facts h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.about-facts ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.about-facts li {
+  margin-bottom: 0.6rem;
+}
+
+.about-facts li:last-child {
+  margin-bottom: 0;
+}
+
+main p a {
+  color: var(--accent);
+}
