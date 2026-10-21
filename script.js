@@ -152,7 +152,8 @@ function setupMathFacts() {
     "Euler's identity, e^(i\u03C0) + 1 = 0, links five of the most important numbers in mathematics in one equation.",
     "The Indian mathematician Brahmagupta wrote rules for doing arithmetic with zero in the 7th century.",
     "The word \"algebra\" comes from al-jabr, a term used in a book by the mathematician Al-Khwarizmi.",
-    "According to a famous story, the young Gauss quickly added the numbers from 1 to 100 by noticing they make 50 pairs that each add up to 101, giving 5050."
+    "According to a famous story, the young Gauss quickly added the numbers from 1 to 100 by noticing they make 50 pairs that each add up to 101, giving 5050.",
+     "Ismail is a human."
   ];
 
   var last = -1;
